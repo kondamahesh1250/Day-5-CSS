@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhaar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        div {
+            display: inline-block;
+            vertical-align: top;
+            text-align: justify;
+            background-color: white;
+        }
+
+        .b1 {
+            background-color: blue;
+            display: block;
+            position: relative;
+            bottom: 50px;
+        }
+
+        button {
+            background-color: blue;
+            border: 1px solid blue;
+            padding: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .abc {
+            display: none;
+        }
+
+        .abc a {
+            display: block;
+            text-decoration: none;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 30px;
+            background-color: white;
+        }
+
+        .but1:focus-within~.abc {
+            display: block;
+
+        }
+
+        .but2:focus-within~.bcd {
+            display: block;
+        }
+
+        .bcd {
+            display: none;
+        }
+
+        .bcd a {
+            display: block;
+            text-decoration: none;
+            padding-right: 40px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .ecosystem {
+            display: none;
+        }
+
+        .ecosystem a {
+            display: block;
+            text-decoration: none;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 40px;
+        }
+
+        .but3:focus-within~.ecosystem {
+            display: block;
+        }
+
+        .media a {
+            display: block;
+            text-decoration: none;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 40px;
+        }
+
+        .media {
+            display: none;
+        }
+
+        .but4:focus-within~.media {
+            display: block;
+        }
+
+        .have a {
+            display: block;
+            text-decoration: none;
+            padding-right: 50px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+
+        .but5:focus-within~.have {
+            display: block;
+        }
+
+        .have {
+            display: none;
+        }
+
+        h4 {
+            display: inline;
+            position: relative;
+            bottom: 30px;
+        }
+
+        h5 {
+            display: inline;
+            position: relative;
+            left: 105px;
+            bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="display: inline-block">
+        <img src="./Untitled.png" alt="" style="width: 100px;">
+        <h4>Unique Identification Authority Of India</h4><br>
+        <h5>Government Of India</h5>
+    </div>
+    <div>
+        <img src="data:image/jpeg;base64,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"
+            alt="" style="width: 300px; position: relative; left: 900px; bottom: 40px;">
+    </div>
+    <header>
+        <div class="b1">
+            <button class="but1">My Aadhaar<i class="fa-solid fa-angle-down"></i></button>
+            <button class="but2">About UIDAI<i class="fa-solid fa-angle-down"></i></button>
+            <button class="but3">Ecosystem<i class="fa-solid fa-angle-down"></i></button>
+            <button class="but4">Media & Resources<i class="fa-solid fa-angle-down"></i></button>
+            <button class="but5">Contact Us<i class="fa-solid fa-angle-down"></i></button>
+
+            <div class="abc">
+                <div>
+                    <h3>Update Your Aadhaar</h3>
+                    <a href="#">Document Update</a>
+                    <a href="#">Check Aadhaar Update Status</a>
+                    <a href="#">Update Demographics Data & Check Status</a>
+                    <a href="#">List of Supporting Documents</a>
+                    <a href="#">Enrolment & Update Forms</a>
+                    <a href="#">Aadhaar Enrolment & Update Charges</a>
+                    <a href="#">Aadhaar Update History</a>
+                    <a href="#">Update Aadhaar at Enrolment/Update Center</a>
+                </div>
+                <div>
+                    <h3>Get Aadhaar</h3>
+                    <a href="#">Book an Appointment</a>
+                    <a href="#">Check Aadhaar Status</a>
+                    <a href="#">Download Aadhaar</a>
+                    <a href="#">Order Aadhaar PVC Card</a>
+                    <a href="#">Check Aadhaar PVC Card Status</a>
+                    <a href="#">Locate an Enrolment center in Bhuvan Aadhaar</a>
+                    <a href="#">Aadhaar Enrolment & Update Charges</a>
+                    <a href="#">Enrolment & Update Forms</a>
+                    <a href="#">List of Supporting Documents</a>
+                </div>
+                <div>
+                    <h3>Aadhar Services</h3>
+                    <a href="#">Verify an Aadhaar Number</a>
+                    <a href="#">Verify E-mail/Mobile Number</a>
+                    <a href="#">Retrieve Lost or Forgotten EID/UID</a>
+                    <a href="#">Virtual ID (VID) Generator</a>
+                    <a href="#">Aadhaar Paperless Offline e-kyc (Beta)</a>
+                </div>
+                <div>
+                    <h3>About Your Aadhaar</h3>
+                    <a href="#">Features of Aadhaar</a>
+                    <a href="#">Usage of Aadhaar</a>
+                    <a href="#">Aadhaar Enrolment</a>
+                    <a href="#">Aadhaar Generation</a>
+                    <a href="#">Updating Data on Aadhaar</a>
+                    <a href="#">Security in UIDAI system</a>
+                    <a href="#">Aadhaar Myth Busters</a>
+                </div>
+                <div>
+                    <h3>Aadhaar On Your Mobile</h3>
+                    <a href="#">mAadhaar for Andriod</a>
+                    <a href="#">mAadhaar App links for iOS</a>
+                    <h3>Downloads</h3>
+                    <a href="#">Enrolment and Update Forms</a>
+                    <a href="#">Aadhaar Enrolment and Update Charges</a>
+                    <a href="#">Validity of downloaded Aadhar</a>
+                </div>
+            </div>
+            <div class="bcd">
+                <div>
+                    <h3>Unique Identification Authority Of India</h3>
+                    <a href="#">Vision & Mission</a>
+                    <a href="#">Composition of UIDAI Authority</a>
+                    <a href="#">Organizational Structure</a>
+                </div>
+                <div>
+                    <h3>Legal Framework</h3>
+                    <a href="#">Rules</a>
+                    <a href="#">Notifications</a>
+                    <a href="#">Regulations</a>
+                    <a href="#">Circulars</a>
+                    <a href="#">Judgements</a>
+                    <a href="#">Updated Regulations</a>
+                    <a href="#">Updated Rules</a>
+                </div>
+                <div>
+                    <h3>Work With UIDAI</h3>
+                    <a href="#">Deputation/Contract</a>
+                    <a href="#">Professional/Technical (NISG)</a>
+                    <a href="#">Volunteers/Sabbatical</a>
+                    <a href="#">Officers Served in the Past</a>
+                    <a href="#">Tenders</a>
+                </div>
+                <div>
+                    <h3>Right To Information</h3>
+                    <h3>UIDAI Citizens Charter</h3>
+                    <h3>Archives</h3>
+                    <h3>Aadhaar Dashboard</h3>
+                    <h3>POSH Policy And ICC At UIDAI</h3>
+                </div>
+
+            </div>
+            <div class="ecosystem">
+                <div>
+                    <h3>UIDAI Ecosystem</h3>
+                </div>
+                <div>
+                    <h3>Enrolment Ecosystem</h3>
+                    <a href="#">Registrars</a>
+                    <a href="#">Enrolment Agencies</a>
+                    <a href="#">Aadhaar Seva Kendra</a>
+                </div>
+                <div>
+                    <h3>Enrolment Documents</h3>
+                    <a href="#">Sanction Orders</a>
+                    <a href="#">Aadhaar Saturation Report</a>
+                    <a href="#">Terms of Engagement (TOE)</a>
+                </div>
+                <div>
+                    <h3>Authentication Ecosystem</h3>
+                    <a href="#">Operational Model</a>
+                    <a href="#">Authentication Requesting Agency</a>
+                    <a href="#">Authentication Service Agencies</a>
+                </div>
+                <div>
+                    <h3>Authentication Devices & Documents</h3>
+                    <a href="#">Biometric Devices</a>
+                    <a href="#">QR Code Reader</a>
+                    <a href="#">About Aadhaar Paperless Offline e-kyc</a>
+                    <a href="#">Developer Section</a>
+                    <a href="#">Authentication Documents</a>
+                </div>
+            </div>
+            <div class="media">
+                <div>
+                    <h3>Media</h3>
+                    <a href="#">Aadhaar Broadcast</a>
+                    <a href="#">Quote/Unquote</a>
+                    <a href="#">Archive Press Releases</a>
+                    <a href="#">Press Releases</a>
+                </div>
+                <div>
+                    <h3>Resources</h3>
+                    <a href="#">Advertisements</a>
+                    <a href="#">Photos</a>
+                    <a href="#">Videos</a>
+                </div>
+                <div>
+                    <h3>UIDAI Documents</h3>
+                    <a href="#">Annual Reports</a>
+                    <a href="#">Handbooks</a>
+                    <a href="#">Compendium</a>
+                    <a href="#">Parliament Questions</a>
+                </div>
+                <div>
+                    <h3>Brand Aadhaar</h3>
+                    <a href="#">Logo</a>
+                </div>
+
+            </div>
+            <div class="have">
+                <div>
+                    <h3>Have Any Question ?</h3>
+                    <a href="#">FAQs</a>
+                    <a href="#">Glossary</a>
+                    <a href="#">Aadhaar Usage-Dos and Dont's</a>
+                </div>
+                <div>
+                    <h3>Grievance Redressal Mechanism</h3>
+                    <a href="#">Grievance and Feedback</a>
+                    <a href="#">Check Grievance/Feedback Status</a>
+                </div>
+                <div>
+                    <h3>Right To Information</h3>
+                    <h3>Head Office (HO)</h3>
+                </div>
+            </div>
+
+        </div>
+    </header>
+</body>
+
+</html>
